@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Remarkable from "remarkable";
+import './MarkdownEditor.css';
 
 /**
  * This component renders a textarea that transforms markdown 
