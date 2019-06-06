@@ -13,6 +13,11 @@ Projects
 6. **redux-song-list** - Generic react-redux app that uses redux store to store a list of songs/song data.
 7.  **markdown-editor** - Markdown editor that transforms markdown syntax
 
+Demos
+-----
+![Markdown Editor](https://github.com/abdultolba/react-projects/blob/master/assets/screen-capture.gif "Markdown Editor")
+![Image Search](https://github.com/abdultolba/react-projects/blob/master/assets/screen-capture-_2_.gif "Image Search")
+
 Development
 -----------
 
