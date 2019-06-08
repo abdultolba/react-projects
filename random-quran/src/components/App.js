@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import unsplash from "../api/unsplash";
 import quran from "../api/quran";
@@ -29,6 +29,10 @@ class App extends Component {
 
   render() {
     return (
+        <>
+        <div className="header">
+        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+        </div>
       <div className="body">
         <div className="transbox">
           <Ayah data={this.state.ayah}/>
@@ -49,6 +53,7 @@ class App extends Component {
           }}
         />
       </div>
+      </>
     );
   }
 }

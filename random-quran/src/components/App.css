@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Scheherazade&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Scheherazade', serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 1.5rem;
 }
 
 .body {
@@ -21,6 +37,7 @@
     font-weight: bold;
     text-align: center;
     color: black;
+    direction: rtl;
 }
 
 .body .ayah h3{
@@ -28,7 +45,7 @@
 }
 
 .body .ayah p{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .transbox {
