@@ -19,7 +19,6 @@ class App extends Component {
     const ayahResponse = await quran.get(
       `v1/ayah/${Math.floor(Math.random() * 6236 + 1)}`
     );
-    console.log(ayahResponse);
     this.setState({ ayah: ayahResponse });
 
     const response = await unsplash.get("/photos/random", {
@@ -29,7 +28,6 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.ayah) return <div>Nope</div>;
     return (
       <div className="body">
         <div className="transbox">

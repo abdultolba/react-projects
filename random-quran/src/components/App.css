@@ -23,6 +23,10 @@
     color: black;
 }
 
+.body .ayah h3{
+    font-size: 3.5rem;
+}
+
 .body .ayah p{
     font-size: 2rem;
 }
