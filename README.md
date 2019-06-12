@@ -12,6 +12,8 @@ Projects
 5.  **api_videos** - Video search engine that uses Google's YouTube api to display a list of videos and a selected video player.
 6. **redux-song-list** - Generic react-redux app that uses redux store to store a list of songs/song data.
 7.  **markdown-editor** - Markdown editor that transforms markdown syntax
+8. **random-quran** - Single page website that fetches a random ayah from a Quran API and displays it along with the surah name.
+9. **blog** - Using redux-thunk middleware, fetching blog posts/users from api to organize a blog site.
 
 Demos
 -----
