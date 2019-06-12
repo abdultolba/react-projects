@@ -12,10 +12,8 @@ class Spinner extends Component {
     }
 }
 
-// If no message is provided as a prop, the
-// component will render the message 'Loading...'
 Spinner.defaultProps = {
-    message: 'Loading ayah...'
+    message: 'Retrieving Ayah...'
 };
 
 export default Spinner;
