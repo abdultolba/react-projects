@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"; // make the Redux store available to nested components wrapped in connect() 
 import { createStore } from "redux";
 
 import App from "./components/App";
