@@ -1,5 +1,12 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
+
+const postsReducer = (posts = null, action) => {
+  if (action.type === "FETCH_POSTS") {
+    posts = action.payload;
+  }
+  return posts;
+};
 
 export default combineReducers({
-    replaceMe: () => 'Dummy Reducer'
+  posts: postsReducer
 });
