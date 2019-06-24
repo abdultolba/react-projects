@@ -1,4 +1,3 @@
-import _ from "lodash";
 import jsonPlaceholder from "../api/jsonPlaceholder";
 
 /**
@@ -8,8 +7,7 @@ import jsonPlaceholder from "../api/jsonPlaceholder";
  */
 export const fetchPostsAndUsers = id => async (dispatch, getState) => {
   await dispatch(fetchPosts());
-  // Getting the unique user ID's prevents multiple fetchUser() requests.
-  const userIds = _.uniq(_.map(getState().posts, 'userId'));
+  const userIds = [...new Set(getState().posts.map(post => post.userId))]
   userIds.forEach(id => dispatch(fetchUser(id)));
 };
 
@@ -33,6 +31,7 @@ export const fetchUser = id => async dispatch => {
 
 
 /* Memoize the request function to ensure we don't send duplicate requests */
+// import _ from 'loadash';
 // export const fetchUser = id => dispatch => _fetchUser(id, dispatch);
 // const _fetchUser = _.memoize(async (id, dispatch) => {
 //   const response = await jsonPlaceholder.get(`/users/${id}`);
