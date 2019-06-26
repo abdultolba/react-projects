@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Streamy Service",
+  "name": "Streamy - Online Web Streamer",
   "icons": [
     {
       "src": "favicon.ico",
