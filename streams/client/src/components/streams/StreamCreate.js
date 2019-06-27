@@ -2,26 +2,51 @@ import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends Component {
-  renderInput({ input, label, type, id, meta: { touched, error, warning} }) {
+  renderInput = ({ input, label, type, id, meta }) => {
+    const className = `field ${meta.error && meta.touched ? "error" : ""}`;
     return (
-      <div className="field">
+      <div className={className}>
         <label htmlFor={id}>{label}</label>
-        <input {...input} placeholder={label} type={type} id={id} />
-				{touched &&
-        ((error && <span>{error}</span>) ||
-          (warning && <span>{warning}</span>))}
+        <input
+          {...input}
+          autoComplete="off"
+          placeholder={label}
+          type={type}
+          id={id}
+        />
+        {this.renderMessage(meta)}
       </div>
     );
-  }
+  };
+
+  renderMessage = ({ touched, error, warning }) => {
+    if (touched && error) {
+      return (
+        <div className="ui error message">
+          <div className="header">{error}</div>
+        </div>
+      );
+    }
+    if (touched && warning) {
+      return (
+        <div className="ui warning message">
+          <div className="header">{warning}</div>
+        </div>
+      );
+    }
+  };
 
   onSubmit = formValues => {
-      console.log(formValues);
-  }
+    console.log(formValues);
+  };
 
   render() {
     return (
-      <form className="ui form" onSubmit={this.props.handleSubmit(this.onSubmit)}>
-          <h4 className="ui dividing header">Create a Stream</h4>
+      <form
+        className="ui form error warning"
+        onSubmit={this.props.handleSubmit(this.onSubmit)}
+      >
+        <h4 className="ui dividing header">Create a Stream</h4>
         <Field
           name="title"
           type="text"
@@ -43,18 +68,27 @@ class StreamCreate extends Component {
 }
 
 const validate = formValues => {
-	const errors = {};
+  const errors = {};
 
-	if(!formValues.title){
-		errors.title = 'You must enter a stream title.';
-	}
-	if(!formValues.description){
-		errors.description = 'Please describe the stream.';
-	}
-	return errors;
+  if (!formValues.title) {
+    errors.title = "You must enter a stream title.";
+  }
+
+  return errors;
+};
+
+const warn = formValues => {
+  const warnings = {};
+
+  if (!formValues.description) {
+    warnings.description = "Please describe the stream.";
+  }
+
+  return warnings;
 };
 
 export default reduxForm({
-	form: "streamCreate",
-	validate
+  form: "streamCreate",
+  validate,
+  warn
 })(StreamCreate);
