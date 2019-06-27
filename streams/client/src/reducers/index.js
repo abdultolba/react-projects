@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-const dummyReducer = () => ({});
+import authReducer from './authReducer';
+
 export default combineReducers({
-    dummy: dummyReducer
+    isSignedin: authReducer
 });
