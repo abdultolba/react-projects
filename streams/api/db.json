@@ -1,3 +1,14 @@
 {
-    "streams": []
+  "streams": [
+    {
+      "title": "MyStream",
+      "description": "This is a great stream!",
+      "id": 1
+    },
+    {
+      "title": "Trolling on Minecraft",
+      "description": "Playing minecraft with the boyz",
+      "id": 2
+    }
+  ]
 }
