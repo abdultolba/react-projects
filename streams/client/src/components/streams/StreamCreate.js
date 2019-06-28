@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
+import { comnnect } from 'react-redux';
+
+import { createStream } from '../../actions';
 
 class StreamCreate extends Component {
   renderInput = ({ input, label, type, id, meta }) => {
