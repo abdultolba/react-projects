@@ -9,6 +9,21 @@
       "title": "Trolling on Minecraft",
       "description": "Playing minecraft with the boyz",
       "id": 2
+    },
+    {
+      "title": "Wiring up Django and React Tutorial",
+      "description": "This stream explains how to set up a project that uses python and django for the backend, and react for front-end rendering.",
+      "id": 3
+    },
+    {
+      "title": "Playing MW2 in 2019",
+      "description": "Playing in a MW2 lobby in 2019 - still possible?",
+      "id": 4
+    },
+    {
+      "title": "5 Minute Coding Challenge",
+      "description": "I was challenged to programming the 'snake' game in under 5 minutes, so here's a stream of me doing so.",
+      "id": 5
     }
   ]
 }
