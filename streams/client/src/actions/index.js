@@ -28,6 +28,7 @@ export const createStream = formValues => async (dispatch, getState) => {
   const response = await streams.post("/streams", { ...formValues, userId });
   dispatch({ type: CREATE_STREAM, payload: response.data });
   history.push('/');
+  // TODO: Inform the user if they successfully created a stream
 };
 
 export const fetchStreams = () => async dispatch => {
@@ -51,4 +52,5 @@ export const editStream = (id, formValues) => async (dispatch, getState) => {
   const response = await streams.put(`/streams/${id}`, {...formValues, userId});
   dispatch({ type: EDIT_STREAM, payload: response.data });
   history.push('/');
+  // TODO: Inform the user if they successfully updated a stream
 }
