@@ -17,7 +17,19 @@ class StreamList extends Component {
         </div>
       );
     }
-  }
+	}
+	
+	renderCreate(){
+		if(this.props.isSignedIn){
+			return (
+				<div style={{textAlign: "right"}}>
+					<Link to="/streams/new" className="ui positive basic button">
+						Create Stream
+					</Link>
+				</div>
+			);
+		}
+	}
 
   renderList() {
     return this.props.streams.map(stream => {
@@ -32,18 +44,6 @@ class StreamList extends Component {
         </div>
       );
     });
-	}
-	
-	renderCreate(){
-		if(this.props.isSignedIn){
-			return (
-				<div style={{textAlign: "right"}}>
-					<Link to="/streams/new" className="ui positive basic button">
-						Create Stream
-					</Link>
-				</div>
-			);
-		}
 	}
 
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, Router } from "react-router-dom";
 
 import Header from "./Header";
 import StreamList from "./streams/StreamList";
@@ -9,11 +9,13 @@ import StreamShow from "./streams/StreamShow";
 import StreamDelete from "./streams/StreamDelete";
 import NotFound from './NotFound';
 
+import history from '../history';
+
 class App extends Component {
   render() {
     return (
       <div className="ui container">
-        <Router>
+        <Router history={history}>
           <div>
             <Header />
             <Switch>
