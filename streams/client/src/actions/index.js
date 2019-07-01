@@ -47,9 +47,8 @@ export const deleteStream = id => async dispatch => {
   history.push('/');
 }
 
-export const editStream = (id, formValues) => async (dispatch, getState) => {
-  const { userId } = getState().auth;
-  const response = await streams.put(`/streams/${id}`, {...formValues, userId});
+export const editStream = (id, formValues) => async dispatch => {
+  const response = await streams.patch(`/streams/${id}`, formValues);
   dispatch({ type: EDIT_STREAM, payload: response.data });
   history.push('/');
   // TODO: Inform the user if they successfully updated a stream
