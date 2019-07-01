@@ -24,6 +24,23 @@
       "title": "5 Minute Coding Challenge",
       "description": "I was challenged to programming the 'snake' game in under 5 minutes, so here's a stream of me doing so.",
       "id": 5
+    },
+    {
+      "title": "The Longest Stream Ever",
+      "description": "This is literally the longest stream ever",
+      "id": 6
+    },
+    {
+      "title": "Creating a new stream",
+      "description": "Testing my action creator!",
+      "userId": "112581815616549577874",
+      "id": 7
+    },
+    {
+      "title": "Fullstack React in < 1 Hour!",
+      "description": "Learn how to work with React, Express, Passport, Mongo, and Node in this 1 hour crash course! (totally possible /s)",
+      "userId": "112581815616549577874",
+      "id": 8
     }
   ]
 }
