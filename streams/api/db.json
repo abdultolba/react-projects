@@ -11,8 +11,9 @@
       "id": 2
     },
     {
-      "title": "Wiring up Django and React Tutorial",
+      "title": "Wiring up Django and React Tutorial.",
       "description": "This stream explains how to set up a project that uses python and django for the backend, and react for front-end rendering.",
+      "userId": "112581815616549577874",
       "id": 3
     },
     {
@@ -31,16 +32,27 @@
       "id": 6
     },
     {
-      "title": "Creating a new stream",
-      "description": "Testing my action creator!",
-      "userId": "112581815616549577874",
+      "title": "Editing the Stream",
+      "description": "Editing a stream for the first time... woot woot!",
       "id": 7
     },
     {
-      "title": "Fullstack React in < 1 Hour!",
+      "title": "Fullstack React.js in < 1 Hour",
       "description": "Learn how to work with React, Express, Passport, Mongo, and Node in this 1 hour crash course! (totally possible /s)",
       "userId": "112581815616549577874",
       "id": 8
+    },
+    {
+      "title": "Programmatic Navigation",
+      "description": "I just learned how to programmatically navigate in React + React-Router!",
+      "userId": "112581815616549577874",
+      "id": 9
+    },
+    {
+      "title": "Refactor",
+      "description": "Testing my refactor",
+      "userId": "112581815616549577874",
+      "id": 10
     }
   ]
 }
